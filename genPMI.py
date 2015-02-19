@@ -36,7 +36,7 @@ save.to_csv(fr, sep = ",", index = False)
 s = pd.read_csv('PMI_data.csv')
 t = s[s.PMI > 3]
 
-k = t.sort(columns='PMI')[['term1', 'term2', 'PMI']]
+k = t.sort(columns='PMI', ascending = False)[['term1', 'term2', 'PMI']]
 
 k.to_csv('sortPMI.csv', sep = ',')
 #k = s.drop('term1_cnt', 1)
